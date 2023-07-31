@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from "styled-components";
-// import SearchFood from './Components/SearchFood';
+import SearchFood from './Components/SearchFood';
 
-const Get_URL = "http://localhost:9000/";
+ export const Get_URL = "http://localhost:9000/";
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -35,8 +35,8 @@ export default function App() {
 
   },[])
 
-  if (error) return <div>{error}</div>
-  if (loading) return <div>Loading... </div>
+  if (error) return <div>{error}</div>;
+  if (loading) return <div>Loading... </div>;
 
 
   return (
@@ -56,11 +56,9 @@ export default function App() {
         <Button>Break Fast </Button>
         <Button>Dinner </Button>
         <Button>Lunch</Button>
-
-
       </SelectedContainer>
 
-
+<SearchFood data={data}/>
     </Container>
   )
 }

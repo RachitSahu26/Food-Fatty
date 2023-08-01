@@ -54,6 +54,28 @@ app.get("/", (req, res) => {
       image: "/images/pancake.png",
       type: "dinner",
     },
+
+
+
+
+    {
+      name: "CHICHEN",
+      price: 100,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      image: "/chicken.jpg",
+      type: "breakfast",
+      
+    },
+    
+
+    {
+      name: "SALED",
+      price: 100,
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      image: "/BreakFast.jpg",
+      type: "",
+    },
+    
   ];
 
   res.json(foodData);

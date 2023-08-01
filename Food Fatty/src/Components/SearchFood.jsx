@@ -1,62 +1,83 @@
 import React from 'react'
 import styled from "styled-components"
-import { Get_URL } from '../App'
+import { Get_URL,Button } from '../App'
 
 function SearchFood({ data }) {
     return (
-        <FoodArea>
-            <FoodCards>
+        <FoodCards>
+                
                 {
                     data?.map(({ name, image, text, price }) => (
                         <FoodCard kay={name} >
 
+
                             <div className="FoodCard">
                                 <div className="food-img">
-                                    <img src={Get_URL + image} />
+                                    <img src={Get_URL + image}  alt='food'/>
                                     <div className="food-detail">
                                         <h2>{name}</h2>
                                         <p>{text}</p>
-
                                     </div>
 
 
                                 </div>
+                                        <Button>${price.toFixed(2)} </Button>
 
                             </div>
+
                         </FoodCard>
                     ))}
+           
             </FoodCards>
-        </FoodArea>
+      
     )
 }
 
 export default SearchFood
-const FoodCards = styled.div`
-.FoodCard{
-/* margin:0 auto; */
-width: 370px;
-height: 200px;
-border-radius: 24px;
-margin-left: 22px;
-margin-top: 33px;
-padding: 10px;
+
+
+const FoodCards=styled.div`
+  background-image    : url("/bg.png");
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 600px;
+height: auto;
+justify-content: center;
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+column-gap: 33px;
+row-gap: 33px;
+
+padding-top:30px;`
+
+const FoodCard =styled.div`
 color: black;
-padding-left: 15px;
-    background-color: #ffffff;
+    background-color: #eceaea;
+    /* border: 2px solid red; */
+    width: 280px;
+    height:350px;
+    border-radius: 10px;
+   padding: 10px;
+ transition: 0.4s;
+   &:hover{
+ 
+cursor: pointer;
+scale: 1.1;
 }
 
-`
-const FoodArea = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-background-image: url("/bg.png");
-margin-top: 22px;
-min-height: 500px;
-height: auto;
+Button{
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+   
 `
 
-const FoodCard = styled.div`
 
 
 
-`
+
+
+
+

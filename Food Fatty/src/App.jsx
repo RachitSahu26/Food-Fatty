@@ -100,7 +100,10 @@ export default function App() {
     <Container>
       <TopContainer>
         <div className='log-img'>
-          <img src='/public/logo.svg'></img>
+<h2>
+   F<span>oo</span>d
+   F<span>aa</span>ty
+  </h2>
         </div>
         <div className="input-box">
           <input placeholder='Food Search' onChange={searchFilters} />
@@ -119,6 +122,14 @@ export default function App() {
 
           ))
         }
+
+    
+          <div className="link-div">
+          <a href="https://github.com/RachitSahu26" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png" width="50" alt="512x512 logo github icon" /></a>
+          <a href="https://www.linkedin.com/in/rachit-sahu-004ba2255/" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/linkedin-basic-round-social-logo-png-13.png" width="50" alt="linkedin basic round social logo png" /></a>
+          <a href="https://www.instagram.com/curious.rachit/" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-new-logo-vector-download-13.png" width="50" alt="logo ig, instagram new logo vector download" /></a>
+          </div>
+    
       </SelectedContainer>
 
       <SearchFood data={filterData} />
@@ -138,11 +149,19 @@ margin: 0 auto;
 const TopContainer = styled.section`
 display: flex;
 
-justify-content: space-between;
+justify-content:space-between;
 min-height: 140px;
 width: 100%;
 padding:50px 60px ;
 text-align: center;
+
+h2 {
+  font-size: 45px;
+}
+h2 span{
+
+color:aqua
+}
 .input-box{
   input{
 padding: 20px;
@@ -178,6 +197,22 @@ const SelectedContainer = styled.section`
 display: flex;
 justify-content: center;
 gap: 12px;
+
+.link-div img{
+  margin-left: 33px;
+  transition: 0.2s;
+&:hover{
+  scale: 0.7;
+  border: 2px solid aqua;
+border-radius: 50%;
+}
+}
+.link-div {
+
+ position: relative;
+ left: 293px;
+ 
+}
 `
 // ........1(2.1)=> button...........
 

@@ -40,7 +40,7 @@ const FoodCards=styled.div`
   background-image    : url("/bg.png");
 background-repeat: no-repeat;
 background-size: cover;
-min-height: 600px;
+min-height: 650px;
 height: auto;
 justify-content: center;
 display: flex;

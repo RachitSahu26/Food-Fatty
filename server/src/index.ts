@@ -68,13 +68,7 @@ app.get("/", (req, res) => {
     },
     
 
-    {
-      name: "SALED",
-      price: 100,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-      image: "/BreakFast.jpg",
-      type: "",
-    },
+ 
     
   ];
 
